@@ -1,7 +1,11 @@
 package com.abdallah_abdelazim.socketsdemo.knockknock;
 
-import java.net.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 public class KnockKnockServer {
     public static void main(String[] args) {
@@ -19,7 +23,7 @@ public class KnockKnockServer {
             PrintWriter out =
                 new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(
-                new InputStreamReader(clientSocket.getInputStream()));
+                new InputStreamReader(clientSocket.getInputStream()))
         ) {
         
             String inputLine, outputLine;

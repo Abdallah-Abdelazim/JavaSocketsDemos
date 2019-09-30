@@ -1,7 +1,10 @@
 package com.abdallah_abdelazim.socketsdemo.knockknock;
 
-import java.net.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 public class KKMultiServerThread extends Thread {
     private Socket socket = null;
@@ -17,7 +20,7 @@ public class KKMultiServerThread extends Thread {
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(
-                    socket.getInputStream()));
+                    socket.getInputStream()))
         ) {
             String inputLine, outputLine;
             KnockKnockProtocol kkp = new KnockKnockProtocol();

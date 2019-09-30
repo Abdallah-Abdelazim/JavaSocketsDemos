@@ -1,7 +1,7 @@
 package com.abdallah_abdelazim.socketsdemo.knockknock;
 
-import java.net.*;
-import java.io.*;
+import java.io.IOException;
+import java.net.ServerSocket;
 
 public class KKMultiServer {
     public static void main(String[] args) {

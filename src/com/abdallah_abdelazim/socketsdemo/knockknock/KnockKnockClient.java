@@ -1,7 +1,11 @@
 package com.abdallah_abdelazim.socketsdemo.knockknock;
 
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class KnockKnockClient {
     public static void main(String[] args) {
@@ -19,7 +23,7 @@ public class KnockKnockClient {
             Socket kkSocket = new Socket(hostName, portNumber);
             PrintWriter out = new PrintWriter(kkSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(
-                new InputStreamReader(kkSocket.getInputStream()));
+                new InputStreamReader(kkSocket.getInputStream()))
         ) {
             BufferedReader stdIn =
                 new BufferedReader(new InputStreamReader(System.in));
